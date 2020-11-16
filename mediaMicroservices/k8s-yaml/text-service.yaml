@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: text-service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       death-star-project: media-microsvc
