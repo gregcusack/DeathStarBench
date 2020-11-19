@@ -1,0 +1,2477 @@
+apiVersion: v1
+items:
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"cast-info-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"cast-info-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:55Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:55Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: cast-info-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440344"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/cast-info-memcached-vpa
+    uid: 458ea268-66c1-4959-a3fe-8d8dde6e994e
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: cast-info-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: cast-info-memcached
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1226m
+          memory: "1282088235"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"cast-info-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"cast-info-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:55Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:55Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:53Z"
+    name: cast-info-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440396"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/cast-info-mongodb-vpa
+    uid: fca7ed94-3a6f-453a-8cbd-a46177d8a8bc
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: cast-info-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:50Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: cast-info-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 11940m
+          memory: "13890617360"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"cast-info-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"cast-info-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:56Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:56Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:51Z"
+    name: cast-info-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440360"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/cast-info-service-vpa
+    uid: 65d364b1-593c-4dd5-bc69-44454a912802
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: cast-info-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: cast-info-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 5414m
+          memory: "2605171737"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"compose-review-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"compose-review-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:56Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:56Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: compose-review-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440349"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/compose-review-memcached-vpa
+    uid: c93f5073-1fd6-445f-9e54-30b955ebad0b
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: compose-review-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:53Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: compose-review-memcached
+        lowerBound:
+          cpu: 102m
+          memory: 262144k
+        target:
+          cpu: 182m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 182m
+          memory: 262144k
+        upperBound:
+          cpu: 22489m
+          memory: "2611732338"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"compose-review-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"compose-review-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:56Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:56Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: compose-review-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440359"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/compose-review-service-vpa
+    uid: 2318fbeb-1ac2-4a8b-b559-67d2dfbaeb02
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: compose-review-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: compose-review-service
+        lowerBound:
+          cpu: 147m
+          memory: 262144k
+        target:
+          cpu: 476m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 476m
+          memory: 262144k
+        upperBound:
+          cpu: 52933m
+          memory: "2621636002"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"jaeger-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"jaeger","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:57Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:57Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:52Z"
+    name: jaeger-vpa
+    namespace: media-microsvc
+    resourceVersion: "440388"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/jaeger-vpa
+    uid: b8bc25e9-7f34-4dbb-9ce1-750bc104784a
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: jaeger
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: jaeger
+        lowerBound:
+          cpu: 51m
+          memory: "333184235"
+        target:
+          cpu: 350m
+          memory: "2407501950"
+        uncappedTarget:
+          cpu: 350m
+          memory: "2407501950"
+        upperBound:
+          cpu: 42199m
+          memory: "268062889536"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"media-microsvc-ns-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"media-microsvc-ns","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:57Z"
+    generation: 2
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:57Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:28:51Z"
+    name: media-microsvc-ns-vpa
+    namespace: media-microsvc
+    resourceVersion: "433691"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/media-microsvc-ns-vpa
+    uid: 2b234014-1e29-42c1-8977-9f3505510d72
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: media-microsvc-ns
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:28:49Z"
+      message: 'Cannot read targetRef. Reason: Deployment media-microsvc/media-microsvc-ns
+        does not exist'
+      status: "True"
+      type: ConfigUnsupported
+    - lastTransitionTime: "2020-11-19T05:28:51Z"
+      message: No pods match this VPA object
+      reason: NoPodsMatched
+      status: "True"
+      type: NoPodsMatched
+    - lastTransitionTime: "2020-11-19T05:28:51Z"
+      message: No pods match this VPA object
+      reason: NoPodsMatched
+      status: "False"
+      type: RecommendationProvided
+    recommendation: {}
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-id-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-id-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:58Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:58Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: movie-id-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440351"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-id-memcached-vpa
+    uid: a3da2518-8066-457e-adf7-334604f7dda9
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-id-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:53Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-id-memcached
+        lowerBound:
+          cpu: 28m
+          memory: 262144k
+        target:
+          cpu: 63m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 63m
+          memory: 262144k
+        upperBound:
+          cpu: 7068m
+          memory: "1290264478"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-id-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-id-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:58Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:58Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:51Z"
+    name: movie-id-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440363"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-id-mongodb-vpa
+    uid: 9b827f73-7ff9-40ab-bf62-990465ca552d
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-id-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-id-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 78m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 78m
+          memory: 262144k
+        upperBound:
+          cpu: 8706m
+          memory: "10452019132"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-id-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-id-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:58Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:58Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:51Z"
+    name: movie-id-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440364"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-id-service-vpa
+    uid: b59d5c51-f8a1-48e9-b162-26e2c5800b6b
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-id-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-id-service
+        lowerBound:
+          cpu: 283m
+          memory: 262144k
+        target:
+          cpu: 379m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 379m
+          memory: 262144k
+        upperBound:
+          cpu: 49781m
+          memory: "2655202681"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-info-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-info-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:59Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:59Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: movie-info-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440352"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-info-memcached-vpa
+    uid: 8e325c1d-b014-4686-bf2b-030e8b4e1068
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-info-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-info-memcached
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1227m
+          memory: "1283715108"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-info-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-info-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:59Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:59Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:51Z"
+    name: movie-info-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440368"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-info-mongodb-vpa
+    uid: 81cc12ca-422d-4bc6-bab9-a5c4cc59f61c
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-info-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-info-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 7005m
+          memory: "10412382451"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-info-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-info-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:27:59Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:27:59Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: movie-info-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440346"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-info-service-vpa
+    uid: cd89823d-4f0e-4b32-91a9-9d679fde630f
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-info-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-info-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 2564m
+          memory: "1282088235"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-review-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-review-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:00Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:00Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:53Z"
+    name: movie-review-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440397"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-review-mongodb-vpa
+    uid: d424cede-a995-411f-a20e-25a50e60d0d6
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-review-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:50Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-review-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1227m
+          memory: "10452019132"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-review-redis-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-review-redis","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:00Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:00Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: movie-review-redis-vpa
+    namespace: media-microsvc
+    resourceVersion: "440336"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-review-redis-vpa
+    uid: 168a5d35-ff5b-4b17-a6f3-eac802682ef9
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-review-redis
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:51Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-review-redis
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1226m
+          memory: "1282088235"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"movie-review-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"movie-review-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:01Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:01Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:51Z"
+    name: movie-review-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440376"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/movie-review-service-vpa
+    uid: 3df431e5-deb8-4e09-8794-61e0d2632403
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: movie-review-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: movie-review-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1242m
+          memory: "1298546632"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"nginx-web-server-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"nginx-web-server","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:01Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:01Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:52Z"
+    name: nginx-web-server-vpa
+    namespace: media-microsvc
+    resourceVersion: "440380"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/nginx-web-server-vpa
+    uid: 04337124-e80b-43c0-b8f1-04c91712c880
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: nginx-web-server
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: nginx-web-server
+        lowerBound:
+          cpu: 386m
+          memory: 262144k
+        target:
+          cpu: 587m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 587m
+          memory: 262144k
+        upperBound:
+          cpu: 84210m
+          memory: "4001220617"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"plot-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"plot-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:01Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:01Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: plot-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440343"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/plot-memcached-vpa
+    uid: 953a0a91-d0ae-49bd-b813-d9ad9e00d2bc
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: plot-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: plot-memcached
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1234m
+          memory: "1290264478"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"plot-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"plot-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:02Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:02Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: plot-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440348"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/plot-mongodb-vpa
+    uid: 9ff78ffd-1697-4c99-984d-5aaa46704cb8
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: plot-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:53Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: plot-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 2771m
+          memory: "11282982327"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"plot-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"plot-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:02Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:02Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: plot-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440353"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/plot-service-vpa
+    uid: 00be546b-1527-4837-b843-f66ccd030b63
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: plot-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:29:53Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: plot-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 2564m
+          memory: "1282088235"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"rating-redis-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"rating-redis","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:03Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:03Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:53Z"
+    name: rating-redis-vpa
+    namespace: media-microsvc
+    resourceVersion: "440394"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/rating-redis-vpa
+    uid: b4900182-913c-4520-bfba-bb3b8fb8b01e
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: rating-redis
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:51Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: rating-redis
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 2752m
+          memory: "1376335164"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"rating-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"rating-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:03Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:03Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: rating-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440356"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/rating-service-vpa
+    uid: 44c2b197-ad43-4ceb-9dd1-b0fc4b024d62
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: rating-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: rating-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 126m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 126m
+          memory: 262144k
+        upperBound:
+          cpu: 21722m
+          memory: "1372595890"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"review-storage-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"review-storage-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:03Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:03Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: review-storage-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440337"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/review-storage-memcached-vpa
+    uid: 7425ff70-55e9-48fd-8bdf-19113bfe4ad8
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: review-storage-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: review-storage-memcached
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1327m
+          memory: "1387677285"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"review-storage-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"review-storage-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:04Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:04Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:53Z"
+    name: review-storage-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440398"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/review-storage-mongodb-vpa
+    uid: c8330f83-c509-41ab-a338-e2a69a6216a0
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: review-storage-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:51Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: review-storage-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1321m
+          memory: "11252115157"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"review-storage-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"review-storage-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:04Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:04Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: review-storage-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440339"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/review-storage-service-vpa
+    uid: 43c86d8a-c184-4dc2-b4c1-076624609092
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: review-storage-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: review-storage-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1304m
+          memory: "1363336734"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"text-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"text-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:05Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:05Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:52Z"
+    name: text-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440382"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/text-service-vpa
+    uid: 7f56ec38-193c-4ab0-aa18-219dedbe98fd
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: text-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: text-service
+        lowerBound:
+          cpu: 39m
+          memory: 262144k
+        target:
+          cpu: 143m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 143m
+          memory: 262144k
+        upperBound:
+          cpu: 29682m
+          memory: "1381982758"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"unique-id-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"unique-id-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:05Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:05Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:52Z"
+    name: unique-id-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440385"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/unique-id-service-vpa
+    uid: 11783baf-e5d6-4a11-9f91-296d3fcceb08
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: unique-id-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:50Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: unique-id-service
+        lowerBound:
+          cpu: 62m
+          memory: 262144k
+        target:
+          cpu: 182m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 182m
+          memory: 262144k
+        upperBound:
+          cpu: 35522m
+          memory: "1380095041"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-memcached-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-memcached","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:05Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:05Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: user-memcached-vpa
+    namespace: media-microsvc
+    resourceVersion: "440341"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-memcached-vpa
+    uid: 7bb80e81-469f-486d-b5d8-3c333c530fd9
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-memcached
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-memcached
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 35m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 35m
+          memory: 262144k
+        upperBound:
+          cpu: 5937m
+          memory: "1393419332"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:06Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:06Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:53Z"
+    name: user-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440395"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-mongodb-vpa
+    uid: 70a59748-245a-46b3-b08e-f9411d2719f0
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:51Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-mongodb
+        lowerBound:
+          cpu: 27m
+          memory: 262144k
+        target:
+          cpu: 109m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 109m
+          memory: 262144k
+        upperBound:
+          cpu: 13063m
+          memory: "11221417820"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-review-mongodb-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-review-mongodb","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:06Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:06Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:49Z"
+    name: user-review-mongodb-vpa
+    namespace: media-microsvc
+    resourceVersion: "440342"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-review-mongodb-vpa
+    uid: a15fc941-9395-4b90-a329-003ae6996889
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-review-mongodb
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:53Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-review-mongodb
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1325m
+          memory: "11282982327"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-review-redis-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-review-redis","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:06Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:06Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:54Z"
+    name: user-review-redis-vpa
+    namespace: media-microsvc
+    resourceVersion: "440401"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-review-redis-vpa
+    uid: 67ac25dc-3f10-4004-91ee-c67cec943a14
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-review-redis
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:52Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-review-redis
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1312m
+          memory: "1372595890"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-review-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-review-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:07Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:07Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:52Z"
+    name: user-review-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440386"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-review-service-vpa
+    uid: 56dd8904-e57e-45bd-a05d-917113a12280
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-review-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:50Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-review-service
+        lowerBound:
+          cpu: 25m
+          memory: 262144k
+        target:
+          cpu: 25m
+          memory: 262144k
+        uncappedTarget:
+          cpu: 25m
+          memory: 262144k
+        upperBound:
+          cpu: 1307m
+          memory: "1367025238"
+- apiVersion: autoscaling.k8s.io/v1
+  kind: VerticalPodAutoscaler
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"autoscaling.k8s.io/v1","kind":"VerticalPodAutoscaler","metadata":{"annotations":{},"name":"user-service-vpa","namespace":"media-microsvc"},"spec":{"targetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"user-service","namespace":"media-microsvc"},"updatePolicy":{"updateMode":"Auto"}}}
+    creationTimestamp: "2020-11-19T05:28:07Z"
+    generation: 16
+    managedFields:
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:targetRef:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:namespace: {}
+          f:updatePolicy:
+            .: {}
+            f:updateMode: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2020-11-19T05:28:07Z"
+    - apiVersion: autoscaling.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:recommendation:
+            .: {}
+            f:containerRecommendations: {}
+      manager: recommender
+      operation: Update
+      time: "2020-11-19T05:42:50Z"
+    name: user-service-vpa
+    namespace: media-microsvc
+    resourceVersion: "440358"
+    selfLink: /apis/autoscaling.k8s.io/v1/namespaces/media-microsvc/verticalpodautoscalers/user-service-vpa
+    uid: f1aabb03-b587-4575-9a1f-fa01e6e4b840
+  spec:
+    targetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: user-service
+      namespace: media-microsvc
+    updatePolicy:
+      updateMode: Auto
+  status:
+    conditions:
+    - lastTransitionTime: "2020-11-19T05:30:49Z"
+      status: "True"
+      type: RecommendationProvided
+    recommendation:
+      containerRecommendations:
+      - containerName: user-service
+        lowerBound:
+          cpu: 216m
+          memory: 262144k
+        target:
+          cpu: 296m
+          memory: "351198544"
+        uncappedTarget:
+          cpu: 296m
+          memory: "351198544"
+        upperBound:
+          cpu: 35186m
+          memory: "41747588996"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
