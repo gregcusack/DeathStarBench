@@ -42,10 +42,10 @@ spec:
         resources:
           limits:
             memory: "63Mi"
-            cpu: "1695m"
+            cpu: "2390m"
           requests:
             memory: "63Mi"
-            cpu: "1695m"
+            cpu: "2390m"
         volumeMounts:
         - mountPath: /usr/local/openresty/nginx/lua-scripts
           name: lua-scripts
