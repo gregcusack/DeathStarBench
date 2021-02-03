@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: plot-service
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -39,4 +39,11 @@ spec:
       - name: plot-service
         image: yg397/media-microservices
         command: ["PlotService"]
+        resources:
+          limits:
+            memory: "38Mi"
+            cpu: "300m"
+          requests:
+            memory: "38Mi"
+            cpu: "300m"
       restartPolicy: Always

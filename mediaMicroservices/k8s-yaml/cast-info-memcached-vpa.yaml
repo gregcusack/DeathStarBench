@@ -1,0 +1,12 @@
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: cast-info-memcached-vpa
+  namespace: media-microsvc
+spec:
+  targetRef:
+    apiVersion: "apps/v1"
+    kind:       Deployment
+    name:       cast-info-memcached
+  updatePolicy:
+    updateMode: "Auto"

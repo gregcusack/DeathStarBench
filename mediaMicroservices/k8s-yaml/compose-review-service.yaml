@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: compose-review-service
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -39,4 +39,11 @@ spec:
       - name: compose-review-service
         image: yg397/media-microservices
         command: ["ComposeReviewService"]
+        resources:
+          limits:
+            memory: "47Mi"
+            cpu: "2248m"
+          requests:
+            memory: "47Mi"
+            cpu: "2248m"
       restartPolicy: Always

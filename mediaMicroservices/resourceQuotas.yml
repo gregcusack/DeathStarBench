@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: app-limit
+spec:
+  hard:
+    requests.cpu: 29892m
+    requests.memory: 16200Mi
+    limits.cpu: 29892m
+    limits.memory: 16200Mi

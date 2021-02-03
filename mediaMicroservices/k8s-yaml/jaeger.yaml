@@ -54,7 +54,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: jaeger
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -69,6 +69,13 @@ spec:
       containers:
       - name: jaeger
         image: jaegertracing/all-in-one:latest
+        resources:
+          limits:
+            memory: "1500Mi"
+            cpu: "350m"
+          requests:
+            memory: "1500Mi"
+            cpu: "350m"
         env:
         - name: COLLECTOR_ZIPKIN_HTTP_PORT
           value: "9411"

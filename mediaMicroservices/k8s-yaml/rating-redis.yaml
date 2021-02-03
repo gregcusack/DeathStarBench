@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: rating-redis
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -38,4 +38,11 @@ spec:
       containers:
       - name: rating-redis
         image: redis
+        resources:
+          limits:
+            memory: "38Mi"
+            cpu: "300m"
+          requests:
+            memory: "38Mi"
+            cpu: "300m"
       restartPolicy: Always

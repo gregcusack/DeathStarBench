@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: movie-id-service
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -39,4 +39,11 @@ spec:
       - name: movie-id-service
         image: yg397/media-microservices
         command: ["MovieIdService"]
+        resources:
+          limits:
+            memory: "68Mi"
+            cpu: "645m"
+          requests:
+            memory: "68Mi"
+            cpu: "645m"
       restartPolicy: Always

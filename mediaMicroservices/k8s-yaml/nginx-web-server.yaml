@@ -24,7 +24,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: nginx-web-server
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       death-star-project: media-microsvc
@@ -39,6 +39,13 @@ spec:
       containers:
       - name: nginx-web-server
         image: yg397/openresty-thrift:xenial
+        resources:
+          limits:
+            memory: "63Mi"
+            cpu: "1695m"
+          requests:
+            memory: "63Mi"
+            cpu: "1695m"
         volumeMounts:
         - mountPath: /usr/local/openresty/nginx/lua-scripts
           name: lua-scripts

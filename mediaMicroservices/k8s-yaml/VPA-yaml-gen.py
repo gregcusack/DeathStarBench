@@ -21,7 +21,6 @@ spec:
     apiVersion: "apps/v1"
     kind:       Deployment
     name:       ''' + deployement_name + '''
-    namespace: media-microsvc
   updatePolicy:
     updateMode: "Auto"'''
 	f = open(deployement_name +"-vpa.yaml", "w")
