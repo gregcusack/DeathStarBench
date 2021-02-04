@@ -4,7 +4,7 @@ metadata:
   name: app-limit
 spec:
   hard:
-    requests.cpu: 45904m
+    requests.cpu: 68856m
     requests.memory: 16200Mi
-    limits.cpu: 45904m
+    limits.cpu: 68856m
     limits.memory: 16200Mi

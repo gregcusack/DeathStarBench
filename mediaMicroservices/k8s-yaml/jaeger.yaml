@@ -72,10 +72,10 @@ spec:
         resources:
           limits:
             memory: "1500Mi"
-            cpu: "700m"
+            cpu: "300m"
           requests:
             memory: "1500Mi"
-            cpu: "700m"
+            cpu: "300m"
         env:
         - name: COLLECTOR_ZIPKIN_HTTP_PORT
           value: "9411"
