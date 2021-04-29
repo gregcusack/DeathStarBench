@@ -64,5 +64,5 @@ spec:
           type: File
       - name: gen-lua
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBenchs/mediaMicroservices/gen-lua
+          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/mediaMicroservices/gen-lua
           type: Directory
