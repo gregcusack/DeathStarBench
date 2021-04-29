@@ -5,13 +5,13 @@ metadata:
   name: review-storage-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: review-storage-memcached
 spec:
   ports:
   - port: 11211
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: review-storage-memcached
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: review-storage-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: review-storage-memcached
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: review-storage-memcached
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: review-storage-memcached
       name: review-storage-memcached
     spec:

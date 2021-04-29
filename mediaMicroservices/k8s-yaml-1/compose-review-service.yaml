@@ -5,13 +5,13 @@ metadata:
   name: compose-review-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: compose-review-service
 spec:
   ports:
   - port: 9090
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: compose-review-service
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: compose-review-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: compose-review-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: compose-review-service
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: compose-review-service
       name: compose-review-service
     spec:

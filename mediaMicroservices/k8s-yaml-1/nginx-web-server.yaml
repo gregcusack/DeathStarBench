@@ -5,14 +5,14 @@ metadata:
   name: nginx-web-server
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: nginx-web-server
 spec:
   type: NodePort
   ports:
   - port: 8080
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: nginx-web-server
 ---
 apiVersion: apps/v1
@@ -21,18 +21,18 @@ metadata:
   name: nginx-web-server
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: nginx-web-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: nginx-web-server
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: nginx-web-server
       name: nginx-web-server
     spec:

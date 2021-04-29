@@ -5,13 +5,13 @@ metadata:
   name: cast-info-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-service
 spec:
   ports:
   - port: 9090
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-service
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: cast-info-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: cast-info-service
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: cast-info-service
       name: cast-info-service
     spec:

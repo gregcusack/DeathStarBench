@@ -5,13 +5,13 @@ metadata:
   name: user-review-redis
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-review-redis
 spec:
   ports:
   - port: 6379
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-review-redis
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: user-review-redis
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-review-redis
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: user-review-redis
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: user-review-redis
       name: user-review-redis
     spec:

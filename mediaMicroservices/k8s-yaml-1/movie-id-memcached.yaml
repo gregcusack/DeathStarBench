@@ -5,13 +5,13 @@ metadata:
   name: movie-id-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: movie-id-memcached
 spec:
   ports:
   - port: 11211
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: movie-id-memcached
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: movie-id-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: movie-id-memcached
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: movie-id-memcached
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: movie-id-memcached
       name: movie-id-memcached
     spec:

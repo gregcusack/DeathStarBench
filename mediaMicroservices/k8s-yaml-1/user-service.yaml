@@ -5,13 +5,13 @@ metadata:
   name: user-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-service
 spec:
   ports:
   - port: 9090
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-service
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: user-service
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: user-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: user-service
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: user-service
       name: user-service
     spec:

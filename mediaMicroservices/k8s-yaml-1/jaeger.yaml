@@ -5,7 +5,7 @@ metadata:
   name: jaeger-out
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: jaeger
 spec:
   type: NodePort
@@ -13,7 +13,7 @@ spec:
   - port: 16686
     targetPort: 16686
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: jaeger
 ---
 apiVersion: v1
@@ -22,7 +22,7 @@ metadata:
   name: jaeger
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: jaeger
 spec:
   ports:
@@ -42,7 +42,7 @@ spec:
   - port: 14268
     name: tcp3
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: jaeger
 ---
 apiVersion: apps/v1
@@ -51,18 +51,18 @@ metadata:
   name: jaeger
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: jaeger
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: jaeger
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: jaeger
       name: jaeger
     spec:

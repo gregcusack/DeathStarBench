@@ -5,13 +5,13 @@ metadata:
   name: plot-mongodb
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: plot-mongodb
 spec:
   ports:
   - port: 27017
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: plot-mongodb
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: plot-mongodb
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: plot-mongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: plot-mongodb
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: plot-mongodb
       name: plot-mongodb
     spec:

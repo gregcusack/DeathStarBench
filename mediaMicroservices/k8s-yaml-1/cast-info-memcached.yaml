@@ -5,13 +5,13 @@ metadata:
   name: cast-info-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-memcached
 spec:
   ports:
   - port: 11211
   selector:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-memcached
 ---
 apiVersion: apps/v1
@@ -20,18 +20,18 @@ metadata:
   name: cast-info-memcached
   namespace: media-microsvc-1
   labels:
-    death-star-project: media-microsvc-1
+    death-star-project: media-microsvc
     app-name: cast-info-memcached
 spec:
   replicas: 1
   selector:
     matchLabels:
-      death-star-project: media-microsvc-1
+      death-star-project: media-microsvc
       app-name: cast-info-memcached
   template:
     metadata:
       labels: 
-        death-star-project: media-microsvc-1
+        death-star-project: media-microsvc
         app-name: cast-info-memcached
       name: cast-info-memcached
     spec:
