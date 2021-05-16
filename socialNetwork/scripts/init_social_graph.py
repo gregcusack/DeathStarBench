@@ -60,16 +60,19 @@ async def follow(addr, edges):
     print(idx, "edges finished")
 
 if __name__ == '__main__':
-  if len(sys.argv) < 2:
-    filename = "datasets/social-graph/socfb-Reed98/socfb-Reed98.mtx"
+  ip = ""
+  if len(sys.argv) < 3:
+    filename = "/mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/datasets/social-graph/socfb-Reed98/socfb-Reed98.mtx"
+    ip = sys.argv[1]
   else:
     filename = sys.argv[1]
+    ip = sys.argv[2]
   with open(filename, 'r') as file:
     nodes = getNodes(file)
     edges = getEdges(file)
 
   # Use your cluster-ip here:
-  addr = "http://10.68.39.88:8080"
+  addr = "http://" + ip + ":8080"
   loop = asyncio.get_event_loop()
   future = asyncio.ensure_future(register(addr, nodes))
   loop.run_until_complete(future)

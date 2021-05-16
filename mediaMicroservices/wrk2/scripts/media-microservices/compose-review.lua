@@ -1028,8 +1028,9 @@ request = function()
   local title = movie_titles[movie_index]
   local rating = math.random(0, 10)
   local text = string.random(256)
-
-  local path = "http://10.106.218.226:8080/wrk2-api/review/compose"
+ 
+  --local path = "http://10.106.218.226:8080/wrk2-api/review/compose"
+  local path = "http://10.97.201.128:8080/wrk2-api/review/compose"
   local method = "POST"
   local headers = {}
   local body = "username=" .. username .. "&password=" .. password .. "&title=" ..
