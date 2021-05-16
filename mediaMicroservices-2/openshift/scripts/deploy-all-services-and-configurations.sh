@@ -24,7 +24,7 @@ mmsclient=$(oc get pod | grep mms-client- | cut -f 1 -d " ")
 
 echo "After all pods have been created:"
 echo
-echo "Verify that files under DeathStarBench/mediaMicroservices/scripts have the latest web server url -- or use the local cluster addressing scheme: nginx-web-server.media-microsvc-2.svc.cluster.local"
+echo "Verify that files under DeathStarBench/mediaMicroservices-2/scripts have the latest web server url -- or use the local cluster addressing scheme: nginx-web-server.media-microsvc-2.svc.cluster.local"
 echo "oc get ep | grep nginx-web-server"
 oc get ep | grep nginx-web-server
 echo "Files containing known http endpoints:"
@@ -38,11 +38,11 @@ echo "oc rsh deployment/mms-client"
 echo
 echo "Run the following on a working mms client node to load the dataset:"
 echo
-echo "cd /root/DeathStarBench/mediaMicroservices/scripts"
+echo "cd /root/DeathStarBench/mediaMicroservices-2/scripts"
 echo "python3 write_movie_info.py"
 echo "./register_users.sh"
 echo
-echo "cd /root/DeathStarBench/mediaMicroservices/wrk2"
+echo "cd /root/DeathStarBench/mediaMicroservices-2/wrk2"
 echo "make clean"
 echo "make"
 echo

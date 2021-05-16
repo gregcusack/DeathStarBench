@@ -10,7 +10,7 @@ cd $(dirname $0)/../..
 
 echo "Run the following to load the dataset"
 echo
-echo "cd /root/DeathStarBench/mediaMicroservices/scripts"
+echo "cd /root/DeathStarBench/mediaMicroservices-3/scripts"
 echo "python3 write_movie_info.py"
 echo "./register_users.sh"
 echo "cd -"
