@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: movie-info-mongodb
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       death-star-project: media-microsvc
