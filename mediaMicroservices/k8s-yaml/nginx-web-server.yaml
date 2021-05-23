@@ -24,7 +24,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: nginx-web-server
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       death-star-project: media-microsvc
