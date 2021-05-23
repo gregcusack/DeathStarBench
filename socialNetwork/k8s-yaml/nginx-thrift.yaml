@@ -57,21 +57,21 @@ spec:
       volumes:
       - name: lua-scripts
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/lua-scripts-k8s
+          path: /users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/lua-scripts-k8s
           type: Directory
       - name: pages
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/pages
+          path: /users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/pages
           type: Directory
       - name: nginx-conf
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/conf/nginx-k8s.conf
+          path: /users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/conf/nginx-k8s.conf
           type: File
       - name: jaeger-config-json
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/jaeger-config.json
+          path: /users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/nginx-web-server/jaeger-config.json
           type: File
       - name: gen-lua
         hostPath: 
-          path: /mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/gen-lua
+          path: /users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/gen-lua
           type: Directory

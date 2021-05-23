@@ -62,7 +62,7 @@ async def follow(addr, edges):
 if __name__ == '__main__':
   ip = ""
   if len(sys.argv) < 3:
-    filename = "/mnt/ECKernel/Distributed-Containers/third_party/DeathStarBench/socialNetwork/datasets/social-graph/socfb-Reed98/socfb-Reed98.mtx"
+    filename = "/users/gcusack/Distributed-Containers/third_party/DeathStarBench/socialNetwork/datasets/social-graph/socfb-Reed98/socfb-Reed98.mtx"
     ip = sys.argv[1]
   else:
     filename = sys.argv[1]
