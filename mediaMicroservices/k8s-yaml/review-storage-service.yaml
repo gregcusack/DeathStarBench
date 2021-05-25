@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: review-storage-service
 spec:
-  replicas: 6
+  replicas: 5
   selector:
     matchLabels:
       death-star-project: media-microsvc
