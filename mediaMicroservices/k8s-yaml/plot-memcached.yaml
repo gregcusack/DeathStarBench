@@ -23,7 +23,7 @@ metadata:
     death-star-project: media-microsvc
     app-name: plot-memcached
 spec:
-  replicas: 5
+  replicas: 7
   selector:
     matchLabels:
       death-star-project: media-microsvc
